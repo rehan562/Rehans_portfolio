@@ -1,43 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="This is a portfolio website for artists."
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title></title>
+    <meta name="description" content="Portfolio of Rehan Fazal - PhD Scholar in Computer Vision, AI, and Autonomous Systems." />
+    <title>Rehan Fazal | Computer Vision & Autonomous Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Rehan Fazal home">RF<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </nav>
+      <a class="header-contact" href="tel:+919205809739">Let's talk <span aria-hidden="true">↗</span></a>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Computer vision · AI · robotics</p>
+          <h1>Building safer<br /><em>autonomous</em> systems.</h1>
+          <p class="hero-intro">I am Rehan Fazal, a PhD Scholar at IIIT Delhi working at the intersection of visual perception, uncertainty estimation, and autonomous driving.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore my work <span>↓</span></a>
+            <a class="text-link" href="tel:+919205809739">Get in touch <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-frame"><img src="assets/rehan-fazal.jpg" alt="Portrait of Rehan Fazal" /></div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-note"><span class="note-dot"></span><span>Researching<br />reliable perception</span></div>
+          <p class="vertical-label">NEW DELHI · INDIA</p>
+        </div>
+      </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <section class="focus-strip" aria-label="Research focus">
+        <p>Current focus</p><span>01</span><strong>Uncertainty-aware perception for autonomous driving</strong><span class="arrow">↘</span>
+      </section>
+
+      <section class="section work-section" id="work">
+        <div class="section-heading"><p class="eyebrow"><span></span> Selected work</p><h2>From pixels<br />to <em>physical</em> systems.</h2></div>
+        <div class="project-grid">
+          <article class="project project-featured">
+            <div class="project-art art-driving"><span class="grid-lines"></span><span class="car car-one"></span><span class="car car-two"></span><span class="scan-line"></span><p>PERCEPTION / 01</p></div>
+            <div class="project-meta"><div><p class="project-number">01 / AUTONOMOUS DRIVING</p><h3>Multi-agent motion prediction</h3></div><p>Predicting surrounding traffic trajectories to help autonomous vehicles make safer decisions.</p></div>
+          </article>
+          <article class="project">
+            <div class="project-art art-vision"><div class="vision-circle"></div><div class="vision-box box-one"></div><div class="vision-box box-two"></div><p>YOLO · TRACKING</p></div>
+            <div class="project-meta"><div><p class="project-number">02 / COMPUTER VISION</p><h3>Person detection & tracking</h3></div><p>YOLOX-tiny paired with ByteTrack, SORT, and DeepSORT for real-time tracking.</p></div>
+          </article>
+          <article class="project">
+            <div class="project-art art-robot"><div class="robot-path"></div><span class="robot-node node-a"></span><span class="robot-node node-b"></span><span class="robot-node node-c"></span><p>RL / GAZEBO</p></div>
+            <div class="project-meta"><div><p class="project-number">03 / REINFORCEMENT LEARNING</p><h3>Robot navigation policy</h3></div><p>Deep Q-learning for TurtleBot navigation through dynamically generated Gazebo scenarios.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading"><p class="eyebrow"><span></span> Experience</p><h2>Research that<br />moves <em>forward.</em></h2></div>
+        <div class="timeline">
+          <article class="timeline-item"><p>2025 — Present</p><div><h3>PhD Scholar <span>· IIIT Delhi</span></h3><p>Estimating uncertainty to improve the safety of autonomous driving systems. Current work includes multimodal fitting, object-detector calibration, and motion prediction.</p></div></article>
+          <article class="timeline-item"><p>2024 — 2025</p><div><h3>Research Assistant <span>· IIITD Autonomous Last Mile Vehicle</span></h3><p>Developed perception, mapping, localization, calibration, and ROS-based system integration for a full autonomous driving pipeline.</p></div></article>
+          <article class="timeline-item"><p>2023 — 2024</p><div><h3>ML & DL Intern <span>· IIITD Incubation / Enord</span></h3><p>Built efficient object-detection, tracking, and stereo-depth systems for drones on NVIDIA Jetson edge devices.</p></div></article>
+          <article class="timeline-item"><p>2022</p><div><h3>Data Science Intern <span>· Locobuzz</span></h3><p>Fine-tuned and deployed NLP models, built sentiment-classification pipelines, and prepared high-quality scraped datasets.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section capabilities">
+        <div><p class="eyebrow"><span></span> Toolkit</p><h2>Tools for<br /><em>intelligent</em> machines.</h2></div>
+        <div class="skill-columns"><div><p class="skill-label">Core</p><ul><li>Computer Vision</li><li>Deep Learning</li><li>Robotics & ROS</li><li>Reinforcement Learning</li></ul></div><div><p class="skill-label">Stack</p><ul><li>Python · C++ · MATLAB</li><li>PyTorch · NumPy · Pandas</li><li>Docker · Git · Ubuntu</li><li>CARLA · Gazebo · RViz</li></ul></div></div>
+      </section>
+
+      <section class="section education-section" id="education">
+        <p class="eyebrow"><span></span> Education & recognition</p>
+        <div class="education-grid"><div><h2>Always<br /><em>learning.</em></h2><a class="text-link" href="tel:+919205809739">Start a conversation <span>↗</span></a></div><div class="education-list"><article><p>2023</p><div><h3>M.Tech, Computational Mathematics</h3><p>Jamia Millia Islamia, Delhi · CGPA 9.28</p></div></article><article><p>2020</p><div><h3>B.Tech, Electronics & Communication Engineering</h3><p>Jamia Millia Islamia, Delhi · CGPA 8.8</p></div></article><article><p>Recognition</p><div><h3>GATE qualified in Data Science & Artificial Intelligence</h3><p>Also completed Andrew Ng's Machine Learning course and an internship at DRDO.</p></div></article></div></div>
+      </section>
+
+      <section class="contact-section"><p class="eyebrow"><span></span> Available for research collaborations</p><h2>Have a challenging<br />problem in <em>mind?</em></h2><a class="contact-phone" href="tel:+919205809739">+91 92058 09739 <span>↗</span></a></section>
+    </main>
+    <footer><a class="brand" href="#top">RF<span>.</span></a><p>© 2026 Rehan Fazal</p><a href="#top">Back to top ↑</a></footer>
   </body>
 </html>
