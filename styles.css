@@ -28,3 +28,26 @@
 }
 .art-driving{background:#193d38}
 .art-robot{background:var(--lime)}
+
+/* Overrides: light-blue gutters and video aspect fixes */
+:root{--gutter:#e6f3ff}
+body{background:var(--paper)}
+
+/* show light-blue side gutters only for the featured project video */
+.project-featured .project-art{aspect-ratio:16/9}
+.project-featured .project-art::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,var(--gutter) 0 6%,transparent 6% 94%,var(--gutter) 94% 100%);
+  z-index:0;
+  pointer-events:none;
+}
+.project-featured .project-art .project-video{z-index:1;object-fit:cover}
+.project-video[poster]{background:#000}
+
+@media(max-width:760px){
+  /* keep existing mobile height rule but allow responsive behavior */
+  .project-art,.project-featured .project-art{height:280px;aspect-ratio:auto}
+  .project-featured .project-art::before{background:linear-gradient(90deg,var(--gutter) 0 4%,transparent 4% 96%,var(--gutter) 96% 100%)}
+}
